@@ -6,7 +6,7 @@ What is LAxeron?
 
 How to Use It?
 - ash kazu -p "package_name"
-or
+ or
 - ash kazu
 
 How to Uninstall?
