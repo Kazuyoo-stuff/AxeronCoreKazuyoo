@@ -19,6 +19,11 @@ if [ -n "$1" ]; then
 	fi	
 fi
 
+if [ -z $runPackage ]; then
+	echo "Package is Empty"
+	exit 1
+fi
+
 echo "welcome"
 echo "kontol memek peler bangsat"
 
