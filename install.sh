@@ -71,6 +71,7 @@ setprop debug.sf.predict_hwc_composition_strategy 0
 setprop debug.sf.enable_transaction_tracing false
 setprop debug.sf.enable_gl_backpressure 1
 setprop debug.sf.disable_backpressure 1
+setprop debug.sf.latch_unlocked 1
 setprop debug.sf.hw 0
 setprop debug.sf.latch_unsignaled 0
 setprop debug.sf.auto_latch_unsignaled false
@@ -86,6 +87,9 @@ setprop debug.hwui.use_buffer_age true
 setprop debug.hwui.use_gpu_pixel_buffers 1
 setprop debug.hwui.skia_use_perfetto_track_events false
 setprop debug.hwui.app_memory_policy aggresive
+setprop debug.hwui.use_main_thread true
+setprop debug.hwui.disable_thread_bundle false
+setprop debug.hwui.disable_functor_thread false
 cmd power set-adaptive-power-saver-enabled false
 cmd power set-fixed-performance-mode-enabled true
 am memory-factor set "CRITICAL"
