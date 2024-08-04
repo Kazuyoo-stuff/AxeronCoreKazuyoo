@@ -1,0 +1,7 @@
+id="GT"
+name="Gaming-Tune"
+version="v1.0-beta"
+versionCode=10
+author="Kazuyoo"
+description="Game-Tune Activate Performance Mode (please uninstall this module if problem in your device)"
+runPackage="com.mobile.legends"
