@@ -98,7 +98,7 @@ am force-stop "$runPackage"
 }
 main_tweak > /dev/null 2>&1
 
-echo "[ - ] Main tweaks succes installed.."
+echo "[ - ] Tweaks succes installed.."
 sleep 2
 echo "[ ! ] Finalizing Installation"
 echo ""
