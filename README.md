@@ -1,4 +1,4 @@
-# Game-Tune X Axeron
+# Game-Tune X Axeron 🍁
 Game-Tune Activate Performance Mode, help you for improve experience when in the game
 
 What is LAxeron?
