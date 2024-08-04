@@ -12,4 +12,5 @@ or
 How to Uninstall?
 - ash kazu -r
 
-// kazuyoo
+thanks for using support me
+kazuyoo~
