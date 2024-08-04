@@ -19,13 +19,43 @@ if [ -n "$1" ]; then
 	fi	
 fi
 
+if [ -n "$1" ] && [ $1 == "-vk" ]; then
+	if ls /system/lib/libvulkan.so > /dev/null 2>&1; then
+    	renderer="vulkan"
+		shift
+    else
+    	echo "Vulkan not supported"
+    	exit 1
+	fi
+fi
+
 if [ -z $runPackage ]; then
 	echo "Package is Empty"
 	exit 1
 fi
 
-echo "welcome"
-echo "kontol memek peler bangsat"
+case $1 in
+	"--battery")
+		setprop debug.sf.hw 0
+		setprop debug.egl.hw 0
+		setprop debug.egl.sync 1
+		performance=false
+		setprop debug.composition.type cpu
+		echo "[${runPackage}] battery composing"
+		;;
+	"--performance" | *)
+		setprop debug.sf.hw 1
+		setprop debug.egl.hw 1
+		setprop debug.egl.sync 0
+		performance=true
+		setprop debug.composition.type gpu
+		echo "[${runPackage}] performance composing"
+		;;
+esac
+
+setprop debug.hwui.renderer "$renderer"
+am force-stop "$runPackage"
+echo "[${runPackage}] now using $renderer renderer"
 
 enable_jit() {
 	echo "[${1}] Enabling:"
