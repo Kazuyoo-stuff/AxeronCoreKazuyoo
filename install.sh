@@ -22,6 +22,7 @@ local core="r1716TXsNew16zXr9a21qvWq9ei153XpNeu16HXttau1rHWstaq16PXpdew16TXsdee1
 echo "Installing ${name} (${version})"
 
 # set some configuration parameters.
+setUsingAxeron true
 renderer="opengl"
 usefl=false
 
