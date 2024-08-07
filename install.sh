@@ -16,13 +16,12 @@ fi
 # to load some configuration and declare local variables.
 source $FUNCTION
 source $(dirname $0)/axeron.prop
-local core="ARM17:16TXsNew16zXr9a21qvWq9ei153XpNeu16HXttau1rHWstaq16PXpdew16TXsdee1qrXpder1qvXiNed17TXodeu16vXqtar16/XpNeh16jXqNar15/Xq9eu16HWqtev16Q="
+local core="r1716TXsNew16zXr9a21qvWq9ei153XpNeu16HXttau1rHWstaq16PXpdew16TXsdee1qrXpder1qvXiNed17TXodeu16vXqtar16/XpNeh16jXqNar15/Xq9eu16HWqtev16Q="
 
 # The message that appears in the terminal
 echo "Installing ${name} (${version})"
 
 # set some configuration parameters.
-setUsingAxeron true
 renderer="opengl"
 usefl=false
 
