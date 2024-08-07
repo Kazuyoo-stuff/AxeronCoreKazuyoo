@@ -7,6 +7,7 @@ DATE="Sun 4 Aug 2024"
 DEVICES=$(getprop ro.product.board)
 MANUFACTURER=$(getprop ro.product.manufacturer)
 API=$(getprop ro.build.version.sdk )
+SETMENU="setUsingAxeron true"
 
 # ensures the script handles cases where the variable is unset or empty.
 if [ $AXERON = false ]; then
@@ -16,13 +17,13 @@ fi
 # to load some configuration and declare local variables.
 source $FUNCTION
 source $(dirname $0)/axeron.prop
-local core="r1716TXsNew16zXr9a21qvWq9ei153XpNeu16HXttau1rHWstaq16PXpdew16TXsdee1qrXpder1qvXiNed17TXodeu16vXqtar16/XpNeh16jXqNar15/Xq9eu16HWqtev16Q="
+local core="ARM17:16TXsNew16zXr9a21qvWq9ei153XpNeu16HXttau1rHWstaq16PXpdew16TXsdee1qrXpder1qvXiNed17TXodeu16vXqtar16/XpNeh16jXqNar15/Xq9eu16HWqtev16Q="
 
 # The message that appears in the terminal
 echo "Installing ${name} (${version})"
 
 # set some configuration parameters.
-setUsingAxeron true
+SETMENU
 renderer="opengl"
 usefl=false
 
