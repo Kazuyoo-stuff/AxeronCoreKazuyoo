@@ -7,7 +7,6 @@ DATE="Sun 4 Aug 2024"
 DEVICES=$(getprop ro.product.board)
 MANUFACTURER=$(getprop ro.product.manufacturer)
 API=$(getprop ro.build.version.sdk )
-SETMENU="setUsingAxeron true"
 
 # ensures the script handles cases where the variable is unset or empty.
 if [ $AXERON = false ]; then
@@ -23,7 +22,7 @@ local core="ARM17:16TXsNew16zXr9a21qvWq9ei153XpNeu16HXttau1rHWstaq16PXpdew16TXsd
 echo "Installing ${name} (${version})"
 
 # set some configuration parameters.
-SETMENU
+setUsingAxeron true
 renderer="opengl"
 usefl=false
 
